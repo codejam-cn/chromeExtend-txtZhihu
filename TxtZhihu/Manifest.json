@@ -1,28 +1,35 @@
-﻿
-
-
-{
-    "manifest_version": 2,
+﻿{
+    "manifest_version": 3,
     "name": "素颜知乎",
     "version": "1.0",
     "description": "素颜知乎",
-     "icons": {
+    "icons": {
         "16": "images/16.png",
         "48": "images/48.png",
         "128": "images/128.png"
     },
     "permissions": [
-                        "contextMenus"
-                    ],
-
-
+        "contextMenus"
+    ],
+    "background": {
+        "scripts": [
+            "sample.js"
+        ]
+    },
+    "browser_action": {
+        "default_title": "contextMenus",
+        "default_icon": "images/16.png",
+        "default_popup": "popup.html"
+    },
     "content_scripts": [
         {
-            "matches": ["*://www.zhihu.com/*"],
+            "matches": [
+                "*://www.zhihu.com/*"
+            ],
             "js": [
-                    "jquery-2.2.4.min.js",
-                    "txtZhihu.js"
-                    ]
+                "zepto.min.js",
+                "txtZhihu.js"
+            ]
         }
     ]
 }
