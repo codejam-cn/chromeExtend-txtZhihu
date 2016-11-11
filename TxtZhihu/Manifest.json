@@ -15,21 +15,5 @@
         "scripts": [
             "sample.js"
         ]
-    },
-    "browser_action": {
-        "default_title": "contextMenus",
-        "default_icon": "images/16.png",
-        "default_popup": "popup.html"
-    },
-    "content_scripts": [
-        {
-            "matches": [
-                "*://www.zhihu.com/*"
-            ],
-            "js": [
-                "zepto.min.js",
-                "txtZhihu.js"
-            ]
-        }
-    ]
+    }   
 }
