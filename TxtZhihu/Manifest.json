@@ -9,11 +9,18 @@
         "128": "images/128.png"
     },
     "permissions": [
-        "contextMenus"
-    ],
-    "background": {
-        "scripts": [
-            "sample.js"
-        ]
-    }   
+        "contextMenus",
+		    "activeTab",
+			"tabs" 
+    ],	
+	 "background": {
+			"scripts": [ "background.js" ]
+	},
+	"content_scripts": [
+     {
+       "matches": ["http://*/*","https://*/*"],
+       
+       "js": ["zepto.min.js","front.js"]
+     }
+   ]
 }
