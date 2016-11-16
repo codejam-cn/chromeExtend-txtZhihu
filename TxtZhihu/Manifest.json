@@ -18,7 +18,7 @@
 	},
 	"content_scripts": [
      {
-       "matches": ["http://*/*","https://*/*"],
+       "matches": ["https://www.zhihu.com/*","http://www.zhihu.com/*"],
        
        "js": ["zepto.min.js","front.js"]
      }
