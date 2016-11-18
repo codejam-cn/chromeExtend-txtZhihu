@@ -1,7 +1,7 @@
 ﻿{
-    "manifest_version": 3,
+    "manifest_version": 2,
     "name": "素颜知乎",
-    "version": "1.0",
+    "version": "3.0",
     "description": "素颜知乎",
     "icons": {
         "16": "images/16.png",
