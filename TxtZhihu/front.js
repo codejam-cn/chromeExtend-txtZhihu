@@ -21,7 +21,7 @@ var txtZhihu = {
         var that = this;
         for (var i = 0; i < that.$domArr.length; i++) {
             var binaryIndex = Math.pow(2, i);
-            if ((that.cookieVal & binaryIndex) === 0) {
+            if (!!that.cookieVal && (that.cookieVal & binaryIndex) === 0) {
                 that.$domArr[i].hide();
             }
         }
@@ -29,7 +29,7 @@ var txtZhihu = {
     getCookie: function () {
         var reg = /txtZhihuCookie=\d+/;
         var arr = document.cookie.match(reg);
-        return (arr.length > 0) ? arr[0] : ""; //txtZhihuCookie = 31     
+        return (!!arr && arr.length > 0) ? arr[0] : ""; //txtZhihuCookie = 31     
     },
     addMsgListener: function () {
         var that = this;
