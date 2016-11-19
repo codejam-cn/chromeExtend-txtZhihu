@@ -14,7 +14,7 @@ var lvl1ContextItemId = chrome.contextMenus.create({
 
 
 //二级菜单产生
-var pagePartions = ["top", "profile", "right", "", "portrait", "thumbnail", "all"];
+var pagePartions = ["top", "profile", "right", "", "portrait", "thumbnail"];
 var lvl2ContextItemIdArr = [];
 for (var i = 0; i < pagePartions.length; i++) {
     var obj = (pagePartions[i] === "") ? {

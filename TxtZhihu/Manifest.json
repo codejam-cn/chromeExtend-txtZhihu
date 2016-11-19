@@ -20,7 +20,7 @@
      {
        "matches": ["https://www.zhihu.com/*","http://www.zhihu.com/*"],
        
-       "js": ["zepto.min.js","front.js"]
+       "js": ["zepto.min.js","zepto.cookie.min.js","front.js"]
      }
    ]
 }
