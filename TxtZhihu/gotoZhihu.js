@@ -1,0 +1,1 @@
+window.open("https://www.zhihu.com/","_blank");

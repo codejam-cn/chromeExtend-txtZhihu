@@ -21,11 +21,11 @@ for (var i = 0; i < pagePartions.length; i++) {
         type: "separator",
         "parentId": lvl1ContextItemId
     } : {
-        "title": "toggle " + pagePartions[i],
-        "parentId": lvl1ContextItemId,
-        "documentUrlPatterns": showForPages,
-        "onclick": mycallback
-    }
+            "title": "toggle " + pagePartions[i],
+            "parentId": lvl1ContextItemId,
+            "documentUrlPatterns": showForPages,
+            "onclick": mycallback
+        }
 
     var itemId = chrome.contextMenus.create(obj);
     lvl2ContextItemIdArr.push(itemId);
@@ -48,3 +48,10 @@ function mycallback(info, tab) {
         //console.log(response.farewell);
     });
 }
+
+
+
+chrome.browserAction.onClicked.addListener(function (tab) {
+    chrome.tabs.executeScript(tab.id, { file: 'gotoZhihu.js' });
+});
+
