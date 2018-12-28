@@ -1,8 +1,8 @@
 ﻿{
     "manifest_version": 2,
-    "name": "素颜知乎",
-    "version": "3.2",
-    "description": "素颜知乎",
+    "name": "txt Zhihu.com",
+    "version": "4.0",
+    "description": "txt Zhihu.com",
     "icons": {
         "16": "images/16.png",
         "48": "images/48.png",

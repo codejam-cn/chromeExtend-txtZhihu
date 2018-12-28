@@ -1,15 +1,15 @@
 ﻿
 var txtZhihu = {
-    $top: $(".zu-top"), //1
-    $HomeEntry: $(".HomeEntry"), //2
-    $rightSlide: $(".zu-main-sidebar"), //4
-    $portrait: $(".side-topic-avatar"), //8
-    $thumbnail: $(".zh-lightbox-thumb"), //16
+    $top: $(".AppHeader-inner"), //1
+    $HomeEntry: $(".AppHeader-userInfo"), //2
+    $rightSlide: $(".Sticky"), //4
+    $portrait: $(".Avatar"), //8
+    $thumbnail: $(".RichContent-cover"), //16
     $domArr: [],
     cookieVal: "",
     init: function () {
         var that = this;
-        that.$domArr = [that.$top, that.$HomeEntry, that.$rightSlide, $(""), that.$portrait, that.$thumbnail];
+        that.$domArr = [that.$top, that.$HomeEntry, that.$rightSlide, that.$portrait, that.$thumbnail];
         var cookie = that.getCookie(); //txtZhihuCookie = 31     
         that.cookieVal = cookie.length > 0 ? parseInt(cookie.split('=')[1]) : 0;
         that.hideDoms();
@@ -61,8 +61,8 @@ var txtZhihu = {
         var that = this;
         var temp = [0, 1, 2, 3, 4, 5];
         $(window).scroll(function () {
-            that.$portrait = $(".side-topic-avatar,.zm-item-img-avatar");
-            that.$thumbnail = $(".zh-lightbox-thumb");
+            that.$portrait = $(".Avatar");
+            that.$thumbnail = $(".RichContent-cover");
             that.$domArr = [that.$top, that.$HomeEntry, that.$rightSlide, $(""), that.$portrait, that.$thumbnail];
             for (var i = 4; i < temp.length; i++) {
                 var binaryFlag = Math.pow(2, i);
